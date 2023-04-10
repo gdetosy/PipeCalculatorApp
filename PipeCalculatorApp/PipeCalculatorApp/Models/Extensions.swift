@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -41,7 +40,10 @@ extension ViewController: alert {
     }
 
     func alert1() {
-        let alert = UIAlertController(title: "Формула расчета", message: "The pipe calculator calculates the weight of a round electric-welded pipe using the formula:                                     Pipe length = mass * 1000 / ((pipe diameter - wall thickness) * 0.0246 * wall thickness)",
+        let alert = UIAlertController(title: "Формула расчета", message: """
+                                                                            Трубный калькулятор рассчитывает
+                                                                            вес круглой электросварной трубы по формуле:                         Длина трубы = вес трубы * 1000 / ((диаметр трубы - толщина стенки) * 0.0246 * толщина стенки)
+                                      """,
                                       preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
