@@ -213,7 +213,11 @@
                         <outlet property="checkMarkH" destination="SQI-bH-XxD" id="lfj-Nl-Fa3"/>
                         <outlet property="checkMarkL" destination="9La-rc-rjZ" id="52N-JL-I8E"/>
                         <outlet property="checkMarkS" destination="YKA-Rr-vDK" id="3l4-yF-8fp"/>
+                        <outlet property="diameterTf" destination="JgW-q5-8h3" id="HjQ-Df-yCT"/>
+                        <outlet property="lengthTf" destination="qWV-LN-Yr5" id="f12-vH-73h"/>
                         <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
+                        <outlet property="thicknesTf" destination="GHf-bW-yIo" id="7Aq-Do-hUL"/>
+                        <outlet property="weightTf" destination="Z9y-UF-Urx" id="3M0-KM-Ms2"/>
                         <outlet property="znPipeLabel" destination="vay-Y4-PW4" id="sgu-Oh-tnj"/>
                     </connections>
                 </viewController>
