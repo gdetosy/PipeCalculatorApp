@@ -8,38 +8,214 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Трубный калькулятор-->
+        <!--Калькулятор круглых труб-->
         <scene sceneID="5VT-1U-er1">
             <objects>
-                <viewController id="24M-SH-z97" sceneMemberID="viewController">
+                <viewController id="24M-SH-z97" customClass="ViewController" customModule="PipeCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n1A-CD-5ww">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xEK-hn-COW">
-                                <rect key="frame" x="25" y="113" width="231" height="26.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Параметры трубы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-CW-BjO">
+                                <rect key="frame" x="25" y="108" width="343" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pipe-round" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-8a-GBG">
+                                <rect key="frame" x="147" y="540" width="129" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-ef-CPq">
+                                <rect key="frame" x="152" y="409" width="119" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Вес"/>
+                                    <segment title="Длина"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControl:" destination="24M-SH-z97" eventType="valueChanged" id="Hcl-Zw-WcM"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-UE-z2Q">
+                                <rect key="frame" x="25" y="142" width="343" height="183"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Параметры трубы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-CW-BjO">
-                                        <rect key="frame" x="0.0" y="0.0" width="201.66666666666666" height="26.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="244" verticalHuggingPriority="246" horizontalCompressionResistancePriority="732" verticalCompressionResistancePriority="726" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-nm-3Vm">
-                                        <rect key="frame" x="206.66666666666666" y="4.3333333333333321" width="24.333333333333343" height="18"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-3h-m9E">
+                                        <rect key="frame" x="10" y="10" width="323" height="163"/>
+                                        <subviews>
+                                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-Rp-7CR">
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="34"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-cv-1h6">
+                                                        <rect key="frame" x="0.0" y="9.3333333333333321" width="18.333333333333332" height="16.333333333333336"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="18.329999999999998" id="CCp-Dm-gPa"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Диаметр, мм" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2V-Tn-tCG">
+                                                        <rect key="frame" x="28.333333333333329" y="3.9999999999999982" width="164.66666666666669" height="26.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-q5-8h3">
+                                                        <rect key="frame" x="203" y="0.0" width="120" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="3pY-KG-pmf"/>
+                                                            <constraint firstAttribute="width" constant="120" id="IHj-ge-YVe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <action selector="diameterTextField:" destination="24M-SH-z97" eventType="editingChanged" id="Xfj-S3-okW"/>
+                                                            <action selector="toggleBoldface:" destination="Z9y-UF-Urx" eventType="editingChanged" id="s9Q-5f-M0V"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BUj-BP-Qmy">
+                                                <rect key="frame" x="0.0" y="43" width="323" height="34"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-Rr-vDK">
+                                                        <rect key="frame" x="0.0" y="9.3333333333333321" width="18.333333333333332" height="16.333333333333336"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20.329999999999998" id="Cg5-em-1bG"/>
+                                                            <constraint firstAttribute="width" constant="18.329999999999998" id="uNJ-cq-YEL"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Толщина, мм " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-jS-z0N">
+                                                        <rect key="frame" x="28.333333333333329" y="3.9999999999999982" width="164.66666666666669" height="26.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-bW-yIo">
+                                                        <rect key="frame" x="203" y="0.0" width="120" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="NHO-9q-MRZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <action selector="thicknesTextField:" destination="24M-SH-z97" eventType="editingChanged" id="LbY-JB-1RN"/>
+                                                            <action selector="toggleBoldface:" destination="Z9y-UF-Urx" eventType="editingChanged" id="7sY-vO-d5m"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-zY-PrN">
+                                                <rect key="frame" x="0.0" y="86" width="323" height="34"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9La-rc-rjZ">
+                                                        <rect key="frame" x="0.0" y="9.3333333333333321" width="18.333333333333332" height="16.333333333333336"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20.329999999999998" id="Ud0-pp-cM3"/>
+                                                            <constraint firstAttribute="width" constant="18.329999999999998" id="r1c-ay-iCk"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длина, м              " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIU-Wt-MtP">
+                                                        <rect key="frame" x="28.333333333333329" y="3.9999999999999982" width="164.66666666666669" height="26.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-LN-Yr5">
+                                                        <rect key="frame" x="203" y="0.0" width="120" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="3in-WM-su8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <action selector="lengthTextField:" destination="24M-SH-z97" eventType="editingChanged" id="aZf-oM-hqc"/>
+                                                            <action selector="toggleBoldface:" destination="Z9y-UF-Urx" eventType="editingChanged" id="2aK-8b-C9x"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ulv-XW-Ulm">
+                                                <rect key="frame" x="0.0" y="129" width="323" height="34"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="752" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SWh-Bu-e3J">
+                                                        <rect key="frame" x="0.0" y="9.3333333333333321" width="18.333333333333332" height="16.333333333333336"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20.329999999999998" id="W7S-SQ-OAc"/>
+                                                            <constraint firstAttribute="width" constant="18.329999999999998" id="zKd-kE-9iC"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Вес, тн                  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQI-bH-XxD">
+                                                        <rect key="frame" x="28.333333333333329" y="3.9999999999999982" width="164.66666666666669" height="26.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="213.33333333333337" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-UF-Urx">
+                                                        <rect key="frame" x="203" y="0.0" width="120" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="jFY-K7-xGs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="weightTextField:" destination="24M-SH-z97" eventType="editingChanged" id="HCz-k6-fRr"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="oWd-3h-m9E" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="top" constant="10" id="Ddv-Db-iZc"/>
+                                    <constraint firstItem="oWd-3h-m9E" firstAttribute="leading" secondItem="FdD-UE-z2Q" secondAttribute="leading" constant="10" id="Rib-gW-TnM"/>
+                                    <constraint firstAttribute="bottom" secondItem="oWd-3h-m9E" secondAttribute="bottom" constant="10" id="Yaw-or-OYW"/>
+                                    <constraint firstAttribute="trailing" secondItem="oWd-3h-m9E" secondAttribute="trailing" constant="10" id="jaO-dV-6Qg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес 1 м =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCC-pe-qL3">
+                                <rect key="frame" x="34" y="348" width="334" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес оцинкованной трубы =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vay-Y4-PW4">
+                                <rect key="frame" x="25" y="377" width="343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPg-A0-kAl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="xEK-hn-COW" secondAttribute="trailing" constant="137" id="L3A-kV-wZ0"/>
-                            <constraint firstItem="xEK-hn-COW" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="TQz-yS-tUy"/>
-                            <constraint firstItem="xEK-hn-COW" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="10" id="Uo3-WR-XeW"/>
+                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="vay-Y4-PW4" secondAttribute="trailing" constant="25" id="Ffm-gk-w0w"/>
+                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="MCC-pe-qL3" secondAttribute="trailing" constant="25" id="GWU-mr-bJi"/>
+                            <constraint firstItem="vay-Y4-PW4" firstAttribute="top" secondItem="MCC-pe-qL3" secondAttribute="bottom" constant="8.6699999999999999" id="Jg1-r5-JJ7"/>
+                            <constraint firstItem="vay-Y4-PW4" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="Mvx-JG-we5"/>
+                            <constraint firstItem="bLY-CW-BjO" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="5" id="TYn-Dg-b3t"/>
+                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="bLY-CW-BjO" secondAttribute="trailing" constant="25" id="Wyy-ya-bno"/>
+                            <constraint firstItem="MCC-pe-qL3" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="34" id="ayA-vP-Gkb"/>
+                            <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="39" id="cUJ-lN-Nor"/>
+                            <constraint firstItem="bLY-CW-BjO" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="exk-cQ-6Ln"/>
+                            <constraint firstItem="FdD-UE-z2Q" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="g79-Tb-8F5"/>
+                            <constraint firstItem="MCC-pe-qL3" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="23" id="m3P-Wx-1QN"/>
+                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="FdD-UE-z2Q" secondAttribute="trailing" constant="25" id="xVC-RZ-VXt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Трубный калькулятор" id="K2y-IZ-UVN"/>
+                    <navigationItem key="navigationItem" title="Калькулятор круглых труб" id="K2y-IZ-UVN"/>
+                    <connections>
+                        <outlet property="checkMarkD" destination="YBz-cv-1h6" id="1Mc-g0-jSv"/>
+                        <outlet property="checkMarkH" destination="SQI-bH-XxD" id="lfj-Nl-Fa3"/>
+                        <outlet property="checkMarkL" destination="9La-rc-rjZ" id="52N-JL-I8E"/>
+                        <outlet property="checkMarkS" destination="YKA-Rr-vDK" id="3l4-yF-8fp"/>
+                        <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
+                        <outlet property="znPipeLabel" destination="vay-Y4-PW4" id="sgu-Oh-tnj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xM9-Bh-Ih8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,9 +241,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="questionmark" catalog="system" width="94" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="pipe-round" width="730" height="620"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
