@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     @IBOutlet var checkMarkD: UIImageView!
     
     @IBOutlet var checkMarkS: UIImageView!
@@ -28,7 +28,12 @@ class ViewController: UIViewController {
     
     @IBOutlet var weightTf: UITextField!
     
-    @IBOutlet weak var questions: UIImageView!
+    
+    @IBOutlet weak var lengthLabel: UILabel!
+    
+    @IBAction func question(_ sender: Any) {
+        about()
+    }
     
     @IBAction func diameterTextField(_ sender: Any) {}
     
@@ -42,7 +47,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
 
     private func massa() {
@@ -70,4 +75,12 @@ class ViewController: UIViewController {
         weightTf.text = "\(round(metraj1 * 100000) / 100000)"
         meterLabel.text = "1 m weight = \(round(heightMetrs * 100000) / 100000) t = \(kg) kg."
     }
+    private func about() {
+        if lengthLabel.text == "Длина, м " { alert() }
+        else { alert1() }
+    }
+    
+    
+    
 }
+

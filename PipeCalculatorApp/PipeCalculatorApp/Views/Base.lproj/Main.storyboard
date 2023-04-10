@@ -115,7 +115,7 @@
                                                             <constraint firstAttribute="width" constant="18.329999999999998" id="r1c-ay-iCk"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длина, м              " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIU-Wt-MtP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длина, м " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIU-Wt-MtP">
                                                         <rect key="frame" x="28.333333333333329" y="3.9999999999999982" width="164.66666666666669" height="26.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                         <nil key="textColor"/>
@@ -188,9 +188,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mh1-mS-Pdz">
-                                <rect key="frame" x="278" y="415" width="19.333333333333314" height="17.333333333333314"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-J2-k8U">
+                                <rect key="frame" x="281" y="407" width="32.333333333333314" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="?"/>
+                                <connections>
+                                    <action selector="question:" destination="24M-SH-z97" eventType="touchUpInside" id="rjH-qt-gxF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPg-A0-kAl"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -206,11 +211,11 @@
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="39" id="cUJ-lN-Nor"/>
                             <constraint firstItem="bLY-CW-BjO" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="exk-cQ-6Ln"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="g79-Tb-8F5"/>
+                            <constraint firstItem="Ei9-J2-k8U" firstAttribute="leading" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="10" id="jkl-VA-HAQ"/>
                             <constraint firstItem="MCC-pe-qL3" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="23" id="m3P-Wx-1QN"/>
+                            <constraint firstItem="Ei9-J2-k8U" firstAttribute="top" secondItem="vay-Y4-PW4" secondAttribute="bottom" constant="9.6699999999999999" id="n87-Do-XCl"/>
                             <constraint firstItem="AiW-ef-CPq" firstAttribute="top" secondItem="vay-Y4-PW4" secondAttribute="bottom" constant="11.67" id="wMM-6T-bX6"/>
-                            <constraint firstItem="mh1-mS-Pdz" firstAttribute="top" secondItem="vay-Y4-PW4" secondAttribute="bottom" constant="16" id="wej-rm-CzL"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="FdD-UE-z2Q" secondAttribute="trailing" constant="25" id="xVC-RZ-VXt"/>
-                            <constraint firstItem="mh1-mS-Pdz" firstAttribute="leading" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="7" id="xXh-X9-DJ3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Калькулятор круглых труб" id="K2y-IZ-UVN"/>
@@ -220,9 +225,9 @@
                         <outlet property="checkMarkL" destination="9La-rc-rjZ" id="52N-JL-I8E"/>
                         <outlet property="checkMarkS" destination="YKA-Rr-vDK" id="3l4-yF-8fp"/>
                         <outlet property="diameterTf" destination="JgW-q5-8h3" id="HjQ-Df-yCT"/>
+                        <outlet property="lengthLabel" destination="FIU-Wt-MtP" id="RMb-j2-yIB"/>
                         <outlet property="lengthTf" destination="qWV-LN-Yr5" id="f12-vH-73h"/>
                         <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
-                        <outlet property="questions" destination="mh1-mS-Pdz" id="7Av-iU-1sZ"/>
                         <outlet property="thicknesTf" destination="GHf-bW-yIo" id="7Aq-Do-hUL"/>
                         <outlet property="weightTf" destination="Z9y-UF-Urx" id="3M0-KM-Ms2"/>
                         <outlet property="znPipeLabel" destination="vay-Y4-PW4" id="sgu-Oh-tnj"/>
@@ -254,7 +259,6 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="pipe-round" width="730" height="620"/>
-        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
