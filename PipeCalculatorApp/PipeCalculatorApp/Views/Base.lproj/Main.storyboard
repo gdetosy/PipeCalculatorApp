@@ -26,9 +26,8 @@
                                 <rect key="frame" x="147" y="540" width="129" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-ef-CPq">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-ef-CPq">
                                 <rect key="frame" x="152" y="409" width="119" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Вес"/>
                                     <segment title="Длина"/>
@@ -189,10 +188,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mh1-mS-Pdz">
+                                <rect key="frame" x="278" y="415" width="19.333333333333314" height="17.333333333333314"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPg-A0-kAl"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="AiW-ef-CPq" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="152" id="4dZ-nb-vlD"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="vay-Y4-PW4" secondAttribute="trailing" constant="25" id="Ffm-gk-w0w"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="MCC-pe-qL3" secondAttribute="trailing" constant="25" id="GWU-mr-bJi"/>
                             <constraint firstItem="vay-Y4-PW4" firstAttribute="top" secondItem="MCC-pe-qL3" secondAttribute="bottom" constant="8.6699999999999999" id="Jg1-r5-JJ7"/>
@@ -204,7 +207,10 @@
                             <constraint firstItem="bLY-CW-BjO" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="exk-cQ-6Ln"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="g79-Tb-8F5"/>
                             <constraint firstItem="MCC-pe-qL3" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="23" id="m3P-Wx-1QN"/>
+                            <constraint firstItem="AiW-ef-CPq" firstAttribute="top" secondItem="vay-Y4-PW4" secondAttribute="bottom" constant="11.67" id="wMM-6T-bX6"/>
+                            <constraint firstItem="mh1-mS-Pdz" firstAttribute="top" secondItem="vay-Y4-PW4" secondAttribute="bottom" constant="16" id="wej-rm-CzL"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="FdD-UE-z2Q" secondAttribute="trailing" constant="25" id="xVC-RZ-VXt"/>
+                            <constraint firstItem="mh1-mS-Pdz" firstAttribute="leading" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="7" id="xXh-X9-DJ3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Калькулятор круглых труб" id="K2y-IZ-UVN"/>
@@ -216,6 +222,7 @@
                         <outlet property="diameterTf" destination="JgW-q5-8h3" id="HjQ-Df-yCT"/>
                         <outlet property="lengthTf" destination="qWV-LN-Yr5" id="f12-vH-73h"/>
                         <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
+                        <outlet property="questions" destination="mh1-mS-Pdz" id="7Av-iU-1sZ"/>
                         <outlet property="thicknesTf" destination="GHf-bW-yIo" id="7Aq-Do-hUL"/>
                         <outlet property="weightTf" destination="Z9y-UF-Urx" id="3M0-KM-Ms2"/>
                         <outlet property="znPipeLabel" destination="vay-Y4-PW4" id="sgu-Oh-tnj"/>
@@ -247,6 +254,7 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="pipe-round" width="730" height="620"/>
+        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
