@@ -58,7 +58,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-q5-8h3">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="мм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-q5-8h3">
                                                         <rect key="frame" x="203" y="0.0" width="120" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="3pY-KG-pmf"/>
@@ -90,7 +90,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-bW-yIo">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="мм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-bW-yIo">
                                                         <rect key="frame" x="203" y="0.0" width="120" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="120" id="NHO-9q-MRZ"/>
@@ -121,7 +121,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-LN-Yr5">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="118" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="м" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-LN-Yr5">
                                                         <rect key="frame" x="203" y="0.0" width="120" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="120" id="3in-WM-su8"/>
@@ -152,7 +152,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="213.33333333333337" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-UF-Urx">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="213.33333333333337" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="тн" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-UF-Urx">
                                                         <rect key="frame" x="203" y="0.0" width="120" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="120" id="jFY-K7-xGs"/>

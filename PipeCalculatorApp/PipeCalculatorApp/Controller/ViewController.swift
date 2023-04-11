@@ -63,15 +63,8 @@ final class ViewController: UIViewController {
 //            bigView.animation = Animations.shake.rawValue
 //            bigView.force = 0.25
 //            bigView.animate()
-        default: print("lol")
+        default: print("eror")
         }
-        
-        
-        
-        
-        
-        
-        
     }
     
     override func viewDidLoad() {
@@ -83,48 +76,4 @@ final class ViewController: UIViewController {
         if lengthLabel.text == "Длина, м " { alert() }
         else { alert1() }
     }
-    
-    private func segmentCaseOne() {
-        lengthLabel.text = "Длина, м"
-        weightLabel.text = "Вес, тн"
-        diameterTf.text?.removeAll()
-        thicknesTf.text?.removeAll()
-        lengthTf.text?.removeAll()
-        weightTf.text?.removeAll()
-        weightTf.attributedPlaceholder = NSAttributedString(
-            string: "тн")
-        lengthTf.attributedPlaceholder = NSAttributedString(
-            string: "м")
-        meterLabel.text = " "
-//        heightMetr.animation = Animations.fadeOut.rawValue
-//        heightMetr.animate()
-//        height()
-        checkMarkS.alpha = 0
-        checkMarkD.alpha = 0
-        checkMarkL.alpha = 0
-    }
-
-    private func segmentCaseTwo() {
-        checkMarkS.alpha = 0
-        checkMarkD.alpha = 0
-        checkMarkL.alpha = 0
-        lengthLabel.text = "Вес, тн"
-        weightLabel.text = "Длина, м"
-        diameterTf.text?.removeAll()
-        thicknesTf.text?.removeAll()
-        lengthTf.text?.removeAll()
-        weightTf.text?.removeAll()
-        weightTf.attributedPlaceholder = NSAttributedString(
-            string: "м")
-        lengthTf.attributedPlaceholder = NSAttributedString(
-            string: "тн")
-        meterLabel.text = " "
-//        heightMetr.animation = Animations.fadeOut.rawValue
-//        heightMetr.animate()
-//        height()
-    }
-
-    
-    
-    
 }

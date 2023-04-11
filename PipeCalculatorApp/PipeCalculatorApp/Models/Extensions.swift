@@ -84,3 +84,48 @@ extension ViewController: raschet {
         meterLabel.text = "1 m weight = \(round(heightMetrs * 100000) / 100000) t = \(kg) kg."
     }
 }
+protocol segment {
+    func segmentCaseOne()
+    func segmentCaseTwo()
+}
+extension ViewController: segment {
+    func segmentCaseOne() {
+        lengthLabel.text = "Длина, м"
+        weightLabel.text = "Вес, тн"
+        diameterTf.text?.removeAll()
+        thicknesTf.text?.removeAll()
+        lengthTf.text?.removeAll()
+        weightTf.text?.removeAll()
+        weightTf.attributedPlaceholder = NSAttributedString(
+            string: "тн")
+        lengthTf.attributedPlaceholder = NSAttributedString(
+            string: "м")
+        meterLabel.text = " "
+//        heightMetr.animation = Animations.fadeOut.rawValue
+//        heightMetr.animate()
+//        height()
+        checkMarkS.alpha = 0
+        checkMarkD.alpha = 0
+        checkMarkL.alpha = 0
+    }
+
+    func segmentCaseTwo() {
+        checkMarkS.alpha = 0
+        checkMarkD.alpha = 0
+        checkMarkL.alpha = 0
+        lengthLabel.text = "Вес, тн"
+        weightLabel.text = "Длина, м"
+        diameterTf.text?.removeAll()
+        thicknesTf.text?.removeAll()
+        lengthTf.text?.removeAll()
+        weightTf.text?.removeAll()
+        weightTf.attributedPlaceholder = NSAttributedString(
+            string: "м")
+        lengthTf.attributedPlaceholder = NSAttributedString(
+            string: "тн")
+        meterLabel.text = " "
+//        heightMetr.animation = Animations.fadeOut.rawValue
+//        heightMetr.animate()
+//        height()
+    }
+}
