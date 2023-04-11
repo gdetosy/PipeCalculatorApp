@@ -110,18 +110,18 @@ final class ViewController: UIViewController {
         checkMarkL.alpha = 0
         lengthLabel.text = "Вес, тн"
         weightLabel.text = "Длина, м"
-        diametrTextField.text?.removeAll()
-        tolshinaTextField.text?.removeAll()
-        dlinaTextField.text?.removeAll()
-        heightTextField.text?.removeAll()
-        heightTextField.attributedPlaceholder = NSAttributedString(
+        diameterTf.text?.removeAll()
+        thicknesTf.text?.removeAll()
+        lengthTf.text?.removeAll()
+        weightTf.text?.removeAll()
+        weightTf.attributedPlaceholder = NSAttributedString(
             string: "м")
         lengthTf.attributedPlaceholder = NSAttributedString(
             string: "тн")
-        heightMetr.text = " "
-        heightMetr.animation = Animations.fadeOut.rawValue
-        heightMetr.animate()
-        height()
+        meterLabel.text = " "
+//        heightMetr.animation = Animations.fadeOut.rawValue
+//        heightMetr.animate()
+//        height()
     }
 
     
