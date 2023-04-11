@@ -146,7 +146,7 @@
                                                             <constraint firstAttribute="width" constant="18.329999999999998" id="zKd-kE-9iC"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Вес, тн                  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQI-bH-XxD">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Вес, тн" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQI-bH-XxD">
                                                         <rect key="frame" x="28.333333333333329" y="3.9999999999999982" width="164.66666666666669" height="26.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                         <nil key="textColor"/>
@@ -229,6 +229,7 @@
                         <outlet property="lengthTf" destination="qWV-LN-Yr5" id="f12-vH-73h"/>
                         <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
                         <outlet property="thicknesTf" destination="GHf-bW-yIo" id="7Aq-Do-hUL"/>
+                        <outlet property="weightLabel" destination="SQI-bH-XxD" id="mXf-Hh-5OY"/>
                         <outlet property="weightTf" destination="Z9y-UF-Urx" id="3M0-KM-Ms2"/>
                         <outlet property="znPipeLabel" destination="vay-Y4-PW4" id="sgu-Oh-tnj"/>
                     </connections>
