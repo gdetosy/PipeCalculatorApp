@@ -36,7 +36,7 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func diameterTextField(_ sender: Any) {
-        massa()
+        diametr()
     }
     
     @IBAction func thicknesTextField(_ sender: Any) {
@@ -76,4 +76,27 @@ final class ViewController: UIViewController {
         if lengthLabel.text == "Длина, м " { alert() }
         else { alert1() }
     }
+    private func diametr() {
+      
+        guard let diametr = Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")),
+              diametr > 0, diametr <= 325
+        else { diameterTf.text?.removeAll(); meterLabel.text = " "
+//            diametrTextField.animation = Animations.shake.rawValue
+//            diametrTextField.force = 0.25
+//            diametrTextField.animate()
+            weightTf.text?.removeAll()
+            checkMarkD.alpha = 0
+            return
+        }
+        checkMarkD.alpha = 1
+        if lengthLabel.text == "Длина, м" {
+            massa()
+        } else
+        { length() }
+    }
+    
+    
 }
+
+
+
