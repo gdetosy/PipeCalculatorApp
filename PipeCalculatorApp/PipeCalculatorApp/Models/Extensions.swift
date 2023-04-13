@@ -19,18 +19,14 @@ extension UIViewController {
     }
 }
 
-protocol alert {
+protocol Alert {
     func alert()
     func alert1()
 }
 
-extension ViewController: alert {
+extension ViewController: Alert {
     func alert() {
-        let alert = UIAlertController(title: "Формула расчета", message: """
-                                      Трубный калькулятор рассчитывает
-                                      вес круглой электросварной трубы по формуле:
-                                      Вес трубы = ((диаметр трубы - толщина стенки) x толщина стенки x 0.02466 x длина трубы) / 1000
-                                      """,
+        let alert = UIAlertController(title: strings.alertTitle, message: strings.alertText1,
 
                                       preferredStyle: UIAlertController.Style.alert)
 
@@ -40,10 +36,7 @@ extension ViewController: alert {
     }
 
     func alert1() {
-        let alert = UIAlertController(title: "Формула расчета", message: """
-                                                                            Трубный калькулятор рассчитывает
-                                                                            вес круглой электросварной трубы по формуле:                         Длина трубы = вес трубы * 1000 / ((диаметр трубы - толщина стенки) * 0.0246 * толщина стенки)
-                                      """,
+        let alert = UIAlertController(title: strings.alertTitle, message: strings.alertText2,
                                       preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -52,12 +45,12 @@ extension ViewController: alert {
     }
 }
 
-protocol raschet {
+protocol Raschet {
     func massa()
     func length()
 }
 
-extension ViewController: raschet {
+extension ViewController: Raschet {
     func massa() {
         guard let diametr = Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")),
               let stenka = Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")),
@@ -84,14 +77,16 @@ extension ViewController: raschet {
         meterLabel.text = "1 m weight = \(round(heightMetrs * 100000) / 100000) t = \(kg) kg."
     }
 }
-protocol segment {
+
+protocol Segment {
     func segmentCaseOne()
     func segmentCaseTwo()
 }
-extension ViewController: segment {
+
+extension ViewController: Segment {
     func segmentCaseOne() {
-        lengthLabel.text = "Длина, м"
-        weightLabel.text = "Вес, тн"
+        lengthLabel.text = strings.lengthTxt
+        weightLabel.text = strings.heightTxt
         diameterTf.text?.removeAll()
         thicknesTf.text?.removeAll()
         lengthTf.text?.removeAll()
@@ -115,8 +110,8 @@ extension ViewController: segment {
         checkMarkS.alpha = 0
         checkMarkD.alpha = 0
         checkMarkL.alpha = 0
-        lengthLabel.text = "Вес, тн"
-        weightLabel.text = "Длина, м"
+        lengthLabel.text = strings.heightTxt
+        weightLabel.text = strings.lengthTxt
         diameterTf.text?.removeAll()
         thicknesTf.text?.removeAll()
         lengthTf.text?.removeAll()
@@ -129,5 +124,92 @@ extension ViewController: segment {
 //        heightMetr.animation = Animations.fadeOut.rawValue
 //        heightMetr.animate()
 //        height()
+    }
+}
+
+protocol Calculation {
+    func diameter()
+    func thicknes()
+    func lengths()
+    func weight()
+}
+
+extension ViewController: Calculation {
+    func diameter() {
+        guard let diametr = Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")),
+              diametr > 0, diametr <= 325
+        else { diameterTf.text?.removeAll(); meterLabel.text = " "
+//            diametrTextField.animation = Animations.shake.rawValue
+//            diametrTextField.force = 0.25
+//            diametrTextField.animate()
+            weightTf.text?.removeAll()
+            checkMarkD.alpha = 0
+            return
+        }
+        checkMarkD.alpha = 1
+        if lengthLabel.text == strings.lengthTxt {
+            massa()
+        } else
+        { length() }
+    }
+
+    func thicknes() {
+        guard let dmtr = Float(diameterTf.text!),
+              Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 < Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0,
+              Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= dmtr / 2,
+              Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) != nil
+
+        else {
+//            tolshinaTextField.animation = Animations.shake.rawValue
+//            tolshinaTextField.force = 0.25
+//            tolshinaTextField.animate()
+            checkMarkS.alpha = 0
+            thicknesTf.text?.removeAll()
+
+            checkMarkH.alpha = 0
+            weightTf.text?.removeAll()
+            meterLabel.text = " "
+//            heightMetr.animation = Animations.fadeOut.rawValue
+//            heightMetr.animate()
+            return
+        }
+
+        checkMarkS.alpha = 1
+
+        if lengthLabel.text == strings.lengthTxt {
+            massa()
+        } else
+        { length() }
+    }
+
+    func lengths() {
+        guard Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) != nil,
+              Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= 100
+
+        else {
+//            dlinaTextField.animation = Animations.shake.rawValue
+//            dlinaTextField.force = 0.25
+//            dlinaTextField.animate()
+            lengthTf.text?.removeAll()
+            weightTf.text?.removeAll()
+            checkMarkL.alpha = 0
+            return
+        }
+        checkMarkL.alpha = 1
+        if lengthLabel.text == strings.lengthTxt {
+            massa()
+        } else
+        { length() }
+    }
+
+    func weight() {
+        if
+            diameterTf.text!.isEmpty || thicknesTf.text!.isEmpty || lengthTf.text!.isEmpty
+        {
+            checkMarkH.alpha = 0
+
+        } else {
+            checkMarkH.alpha = 1
+        }
     }
 }
