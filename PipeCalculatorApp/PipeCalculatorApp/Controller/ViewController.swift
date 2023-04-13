@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
     
     @IBOutlet var checkMarkL: UIImageView!
     
-    @IBOutlet var checkMarkH: UILabel!
+    @IBOutlet var checkMarkH: UIImageView!
    
     @IBOutlet var meterLabel: UILabel!
     
@@ -44,11 +44,11 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func lengthTextField(_ sender: Any) {
-        massa()
+       dlina()
     }
     
     @IBAction func weightTextField(_ sender: Any) {
-        massa()
+        height()
     }
     
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
@@ -70,10 +70,11 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        lengthLabel.text = "Длина, м"
     }
 
     private func about() {
-        if lengthLabel.text == "Длина, м " { alert() }
+        if lengthLabel.text == "Длина, м" { alert() }
         else { alert1() }
     }
     private func diametr() {
@@ -95,7 +96,6 @@ final class ViewController: UIViewController {
         { length() }
     }
     private func tolshina() {
-//        let dmtr = Float(diameterTf.text!)
         guard let dmtr = Float(diameterTf.text!),
               Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 < Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0,
               Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= dmtr / 2,
@@ -123,9 +123,34 @@ final class ViewController: UIViewController {
         } else
         { length() }
     }
-   
-    
+    private func dlina() {
+        guard Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) != nil,
+              Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= 100
+        
+        else {
+//            dlinaTextField.animation = Animations.shake.rawValue
+//            dlinaTextField.force = 0.25
+//            dlinaTextField.animate()
+            lengthTf.text?.removeAll()
+            weightTf.text?.removeAll()
+            checkMarkL.alpha = 0
+            return
+        }
+        checkMarkL.alpha = 1
+        if lengthLabel.text == "Длина, м" {
+            massa()
+        } else
+        { length() }
+    }
+
+    private func height() {
+        if
+            diameterTf.text!.isEmpty || thicknesTf.text!.isEmpty || lengthTf.text!.isEmpty
+        {
+            checkMarkH.alpha = 0
+           
+        } else {
+            checkMarkH.alpha = 1
+        }
+    }
 }
-
-
-

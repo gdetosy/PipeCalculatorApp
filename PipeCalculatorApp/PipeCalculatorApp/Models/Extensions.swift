@@ -107,9 +107,11 @@ extension ViewController: segment {
         checkMarkS.alpha = 0
         checkMarkD.alpha = 0
         checkMarkL.alpha = 0
+        checkMarkH.alpha = 0
     }
 
     func segmentCaseTwo() {
+        checkMarkH.alpha = 0
         checkMarkS.alpha = 0
         checkMarkD.alpha = 0
         checkMarkL.alpha = 0

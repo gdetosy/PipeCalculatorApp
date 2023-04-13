@@ -221,7 +221,7 @@
                     <navigationItem key="navigationItem" title="Калькулятор круглых труб" id="K2y-IZ-UVN"/>
                     <connections>
                         <outlet property="checkMarkD" destination="YBz-cv-1h6" id="1Mc-g0-jSv"/>
-                        <outlet property="checkMarkH" destination="SQI-bH-XxD" id="lfj-Nl-Fa3"/>
+                        <outlet property="checkMarkH" destination="SWh-Bu-e3J" id="eLi-Q1-7y3"/>
                         <outlet property="checkMarkL" destination="9La-rc-rjZ" id="52N-JL-I8E"/>
                         <outlet property="checkMarkS" destination="YKA-Rr-vDK" id="3l4-yF-8fp"/>
                         <outlet property="diameterTf" destination="JgW-q5-8h3" id="HjQ-Df-yCT"/>
