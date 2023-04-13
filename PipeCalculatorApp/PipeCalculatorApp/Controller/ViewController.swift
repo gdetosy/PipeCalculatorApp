@@ -40,7 +40,7 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func thicknesTextField(_ sender: Any) {
-        massa()
+        tolshina()
     }
     
     @IBAction func lengthTextField(_ sender: Any) {
@@ -94,7 +94,36 @@ final class ViewController: UIViewController {
         } else
         { length() }
     }
-    
+    private func tolshina() {
+//        let dmtr = Float(diameterTf.text!)
+        guard let dmtr = Float(diameterTf.text!),
+              Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 < Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0,
+              Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= dmtr / 2,
+              Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) != nil
+                
+        else {
+//            tolshinaTextField.animation = Animations.shake.rawValue
+//            tolshinaTextField.force = 0.25
+//            tolshinaTextField.animate()
+            checkMarkS.alpha = 0
+            thicknesTf.text?.removeAll()
+            
+            checkMarkH.alpha = 0
+            weightTf.text?.removeAll()
+            meterLabel.text = " "
+//            heightMetr.animation = Animations.fadeOut.rawValue
+//            heightMetr.animate()
+            return
+        }
+        
+        checkMarkS.alpha = 1
+        
+        if lengthLabel.text == "Длина, м" {
+            massa()
+        } else
+        { length() }
+    }
+   
     
 }
 
