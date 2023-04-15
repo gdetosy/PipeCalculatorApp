@@ -8,8 +8,9 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    @IBOutlet var info: UIImageView!
     
-    @IBOutlet weak var parameterView: UIView!
+    @IBOutlet var parameterView: UIView!
     
     @IBOutlet var checkMarkD: UIImageView!
     
@@ -38,7 +39,7 @@ final class ViewController: UIViewController {
     @IBAction func question(_ sender: Any) {
         about()
     }
-    
+
     @IBAction func diameterTextField(_ sender: Any) {
         diameter()
     }
@@ -76,6 +77,9 @@ final class ViewController: UIViewController {
         viewSettings()
         self.hideKeyboardWhenTappedAround()
         lengthLabel.text = strings.lengthTxt
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tappedMe))
+        info.addGestureRecognizer(tap)
+        info.isUserInteractionEnabled = true
     }
 
     private func about() {
@@ -86,8 +90,12 @@ final class ViewController: UIViewController {
     private func viewSettings() {
         parameterView.layer.cornerRadius = 17
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "back")
+        backgroundImage.image = UIImage(named: "about")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+    }
+
+    @objc func tappedMe() {
+        alertImage()
     }
 }

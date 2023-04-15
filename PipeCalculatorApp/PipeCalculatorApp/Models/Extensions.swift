@@ -22,6 +22,7 @@ extension UIViewController {
 protocol Alert {
     func alert()
     func alert1()
+    func alertImage()
 }
 
 extension ViewController: Alert {
@@ -43,6 +44,20 @@ extension ViewController: Alert {
 
         self.present(alert, animated: true, completion: nil)
     }
+
+    func alertImage() {
+        let showAlert = UIAlertController(title: "Параметры трубы", message: nil, preferredStyle: .alert)
+        let imageView = UIImageView(frame: CGRect(x: 48, y: 45, width: 200, height: 150))
+        imageView.image = UIImage(named: "pipe-round") // Your image here...
+        showAlert.view.addSubview(imageView)
+        let height = NSLayoutConstraint(item: showAlert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+        let width = NSLayoutConstraint(item: showAlert.view as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+        showAlert.view.addConstraint(height)
+        showAlert.view.addConstraint(width)
+        showAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+        }))
+        self.present(showAlert, animated: true, completion: nil)
+    }
 }
 
 protocol Raschet {
@@ -59,12 +74,12 @@ extension ViewController: Raschet {
         let massa1 = ((diametr - stenka) * stenka * 0.02466 * metraj) / 1000
         let heightMetrs = ((diametr - stenka) * stenka * 0.02466 * 1) / 1000
         let kg = (diametr - stenka) * stenka * 0.02466
-        
-        meterLabel.text = "Вес 1м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
+
+        meterLabel.text = "Вес 1 м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
 //        heightMetr.animation = Animations.fadeIn.rawValue
 //        heightMetr.animate()
-       let roundWeight = round(massa1 * 100000) / 100000
-        znPipeLabel.text = "Вес оцинкованной трубы = \((roundWeight) * 1.03) кг"
+        let roundWeight = round(massa1 * 100000) / 100000
+
         weightTf.text = "\(roundWeight)"
     }
 
@@ -78,7 +93,7 @@ extension ViewController: Raschet {
         let heightMetrs = ((diametr - stenka) * stenka * 0.02466 * 1) / 1000
         let kg = (diametr - stenka) * stenka * 0.02466
         weightTf.text = "\(round(metraj1 * 100000) / 100000)"
-        znPipeLabel.text = "Вес оцинкованной трубы = "
+
         meterLabel.text = "Вес 1м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
     }
 }
@@ -100,7 +115,7 @@ extension ViewController: Segment {
             string: "тн")
         lengthTf.attributedPlaceholder = NSAttributedString(
             string: "м")
-        meterLabel.text = " "
+        meterLabel.text = ""
 //        heightMetr.animation = Animations.fadeOut.rawValue
 //        heightMetr.animate()
 //        height()
@@ -125,7 +140,7 @@ extension ViewController: Segment {
             string: "м")
         lengthTf.attributedPlaceholder = NSAttributedString(
             string: "тн")
-        meterLabel.text = " "
+        meterLabel.text = ""
 //        heightMetr.animation = Animations.fadeOut.rawValue
 //        heightMetr.animate()
 //        height()

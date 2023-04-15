@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="24M-SH-z97">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ar9-2c-fEd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Калькулятор круглых труб-->
+        <!--View Controller-->
         <scene sceneID="5VT-1U-er1">
             <objects>
                 <viewController id="24M-SH-z97" customClass="ViewController" customModule="PipeCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,16 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Параметры трубы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-CW-BjO">
-                                <rect key="frame" x="25" y="222.66666666666666" width="343" height="26.333333333333343"/>
+                                <rect key="frame" x="25" y="266.66666666666669" width="207" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pipe-round" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-8a-GBG">
+                                <rect key="frame" x="92" y="81" width="195" height="620"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-UE-z2Q">
-                                <rect key="frame" x="25" y="259" width="343" height="239.33333333333337"/>
+                                <rect key="frame" x="25" y="303" width="343" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-3h-m9E">
-                                        <rect key="frame" x="10" y="10" width="323" height="219.33333333333334"/>
+                                        <rect key="frame" x="10" y="10" width="323" height="172"/>
                                         <subviews>
                                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-Rp-7CR">
                                                 <rect key="frame" x="0.0" y="0.0" width="323" height="34"/>
@@ -151,18 +154,17 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес оцинкованной трубы =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vay-Y4-PW4">
-                                                <rect key="frame" x="0.0" y="172" width="323" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес 1 м =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCC-pe-qL3">
-                                                <rect key="frame" x="0.0" y="199" width="323" height="20.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8P3-2O-2Ju">
+                                                <rect key="frame" x="0.0" y="172" width="323" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCC-pe-qL3">
+                                                        <rect key="frame" x="161.66666666666666" y="0.0" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -175,7 +177,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-J2-k8U">
-                                <rect key="frame" x="275" y="520" width="32.333333333333314" height="34.333333333333371"/>
+                                <rect key="frame" x="261" y="504.99999999999994" width="32.333333333333314" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="?"/>
                                 <connections>
@@ -183,7 +185,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-ef-CPq">
-                                <rect key="frame" x="137" y="520" width="119" height="32"/>
+                                <rect key="frame" x="137" y="505" width="119" height="32"/>
                                 <segments>
                                     <segment title="Вес"/>
                                     <segment title="Длина"/>
@@ -192,43 +194,55 @@
                                     <action selector="segmentControl:" destination="24M-SH-z97" eventType="valueChanged" id="Hcl-Zw-WcM"/>
                                 </connections>
                             </segmentedControl>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vvJ-tJ-EOE">
-                                <rect key="frame" x="-7" y="769" width="400" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="GZH-3i-3iJ"/>
-                                    <tabBarItem systemItem="more" id="Jn7-Kf-fWe"/>
-                                </items>
-                                <color key="selectedImageTintColor" red="0.46666663889999999" green="0.46666663889999999" blue="0.46666663889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </tabBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pipe-round" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-8a-GBG">
-                                <rect key="frame" x="92" y="81" width="195" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lb9-U5-VEc">
+                                <rect key="frame" x="233" y="273" width="19.666666666666657" height="19"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPg-A0-kAl"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="Ei9-J2-k8U" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="21.670000000000002" id="1q4-sG-u5t"/>
+                            <constraint firstItem="Ei9-J2-k8U" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="10" id="1q4-sG-u5t"/>
+                            <constraint firstItem="9uC-8a-GBG" firstAttribute="top" secondItem="n1A-CD-5ww" secondAttribute="top" constant="81" id="AkC-4l-RLM"/>
+                            <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="lb9-U5-VEc" secondAttribute="bottom" constant="10.67" id="D5w-4V-CDq"/>
+                            <constraint firstItem="9uC-8a-GBG" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="92" id="NYR-Hn-voS"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="bLY-CW-BjO" secondAttribute="bottom" constant="10" id="QBR-3D-7Dn"/>
                             <constraint firstItem="AiW-ef-CPq" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="137" id="SzC-g0-UE3"/>
-                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="bLY-CW-BjO" secondAttribute="trailing" constant="25" id="Wyy-ya-bno"/>
+                            <constraint firstItem="AiW-ef-CPq" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="10" id="UOV-gO-KzK"/>
+                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="bLY-CW-BjO" secondAttribute="trailing" constant="161" id="Wyy-ya-bno"/>
+                            <constraint firstItem="lb9-U5-VEc" firstAttribute="leading" secondItem="bLY-CW-BjO" secondAttribute="trailing" constant="1" id="ZOm-Yr-Fdn"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="200" id="cUJ-lN-Nor"/>
-                            <constraint firstItem="AiW-ef-CPq" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="21.670000000000002" id="dPC-Ui-96g"/>
                             <constraint firstItem="bLY-CW-BjO" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="exk-cQ-6Ln"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="g79-Tb-8F5"/>
-                            <constraint firstItem="Ei9-J2-k8U" firstAttribute="leading" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="19" id="j2b-wq-Rg6"/>
+                            <constraint firstItem="Ei9-J2-k8U" firstAttribute="leading" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="5" id="j2b-wq-Rg6"/>
+                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="9uC-8a-GBG" secondAttribute="trailing" constant="106" id="p0p-XU-d1u"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="FdD-UE-z2Q" secondAttribute="trailing" constant="25" id="xVC-RZ-VXt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Калькулятор круглых труб" id="K2y-IZ-UVN"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="K2y-IZ-UVN">
+                        <barButtonItem key="rightBarButtonItem" id="6XL-iu-HKf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uKt-F0-6op">
+                                <rect key="frame" x="302" y="4.6666666666666679" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="About"/>
+                                <connections>
+                                    <segue destination="n3K-fU-EcD" kind="show" id="T7l-M6-i0u"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="checkMarkD" destination="YBz-cv-1h6" id="1Mc-g0-jSv"/>
                         <outlet property="checkMarkH" destination="SWh-Bu-e3J" id="eLi-Q1-7y3"/>
                         <outlet property="checkMarkL" destination="9La-rc-rjZ" id="52N-JL-I8E"/>
                         <outlet property="checkMarkS" destination="YKA-Rr-vDK" id="3l4-yF-8fp"/>
                         <outlet property="diameterTf" destination="JgW-q5-8h3" id="HjQ-Df-yCT"/>
+                        <outlet property="info" destination="lb9-U5-VEc" id="lev-al-x8O"/>
                         <outlet property="lengthLabel" destination="FIU-Wt-MtP" id="RMb-j2-yIB"/>
                         <outlet property="lengthTf" destination="qWV-LN-Yr5" id="f12-vH-73h"/>
                         <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
@@ -236,17 +250,119 @@
                         <outlet property="thicknesTf" destination="GHf-bW-yIo" id="7Aq-Do-hUL"/>
                         <outlet property="weightLabel" destination="SQI-bH-XxD" id="mXf-Hh-5OY"/>
                         <outlet property="weightTf" destination="Z9y-UF-Urx" id="3M0-KM-Ms2"/>
-                        <outlet property="znPipeLabel" destination="vay-Y4-PW4" id="sgu-Oh-tnj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xM9-Bh-Ih8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2583.969465648855" y="-20.422535211267608"/>
+            <point key="canvasLocation" x="4437.4045801526718" y="-20.422535211267608"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="Thf-nJ-kbb">
+            <objects>
+                <viewController id="n3K-fU-EcD" customClass="AboutViewController" customModule="PipeCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esG-2Y-ugx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4Z-c5-aZp">
+                                <rect key="frame" x="25" y="353" width="343" height="166"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Трубный калькулятор производит расчет веса круглой электросварной трубы или ее длины в зависимости от выбранного алгоритма.       </string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Обратная связь:">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">tosyjdm@gmail.com
+Для вопросов по работе приложения и его улучшению.  Рад каждому фитбэку.                                                          </string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="IOS Developer">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=": Антон Якубович">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PYh-ns-phM"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="PYh-ns-phM" firstAttribute="trailing" secondItem="B4Z-c5-aZp" secondAttribute="trailing" constant="25" id="0Tx-au-oDx"/>
+                            <constraint firstItem="B4Z-c5-aZp" firstAttribute="top" secondItem="PYh-ns-phM" secondAttribute="top" constant="250" id="3Ln-Xt-SNF"/>
+                            <constraint firstItem="B4Z-c5-aZp" firstAttribute="leading" secondItem="PYh-ns-phM" secondAttribute="leading" constant="25" id="Feg-U5-VS5"/>
+                            <constraint firstItem="PYh-ns-phM" firstAttribute="bottom" secondItem="B4Z-c5-aZp" secondAttribute="bottom" constant="250" id="lzb-an-dEx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kl5-sj-4CY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DqU-ix-zhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5263.3587786259541" y="-20.422535211267608"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="vh5-bz-YHK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ar9-2c-fEd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="WrW-rG-Bf8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CBy-85-3f9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="24M-SH-z97" kind="relationship" relationship="rootViewController" id="Srf-5x-Ng7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsi-eH-KTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3510.6870229007632" y="-20.422535211267608"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="pipe-round" width="730" height="620"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
