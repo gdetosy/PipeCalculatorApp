@@ -15,7 +15,6 @@
 		9670188C29E300E600069AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9670188A29E300E600069AF9 /* LaunchScreen.storyboard */; };
 		9670189529E4856200069AF9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670189429E4856200069AF9 /* Extensions.swift */; };
 		9670189A29E8887300069AF9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670189929E8887300069AF9 /* Models.swift */; };
-		9670189C29EAECDB00069AF9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670189B29EAECDB00069AF9 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

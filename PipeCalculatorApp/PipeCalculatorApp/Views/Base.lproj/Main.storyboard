@@ -22,9 +22,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pipe-round" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-8a-GBG">
-                                <rect key="frame" x="92" y="81" width="195" height="620"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-UE-z2Q">
                                 <rect key="frame" x="25" y="303" width="343" height="192"/>
                                 <subviews>
@@ -205,9 +202,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Ei9-J2-k8U" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="10" id="1q4-sG-u5t"/>
-                            <constraint firstItem="9uC-8a-GBG" firstAttribute="top" secondItem="n1A-CD-5ww" secondAttribute="top" constant="81" id="AkC-4l-RLM"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="lb9-U5-VEc" secondAttribute="bottom" constant="10.67" id="D5w-4V-CDq"/>
-                            <constraint firstItem="9uC-8a-GBG" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="92" id="NYR-Hn-voS"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="bLY-CW-BjO" secondAttribute="bottom" constant="10" id="QBR-3D-7Dn"/>
                             <constraint firstItem="AiW-ef-CPq" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="137" id="SzC-g0-UE3"/>
                             <constraint firstItem="AiW-ef-CPq" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="10" id="UOV-gO-KzK"/>
@@ -217,7 +212,6 @@
                             <constraint firstItem="bLY-CW-BjO" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="exk-cQ-6Ln"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="g79-Tb-8F5"/>
                             <constraint firstItem="Ei9-J2-k8U" firstAttribute="leading" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="5" id="j2b-wq-Rg6"/>
-                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="9uC-8a-GBG" secondAttribute="trailing" constant="106" id="p0p-XU-d1u"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="FdD-UE-z2Q" secondAttribute="trailing" constant="25" id="xVC-RZ-VXt"/>
                         </constraints>
                     </view>
@@ -353,7 +347,6 @@ Cg
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
-        <image name="pipe-round" width="730" height="620"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
