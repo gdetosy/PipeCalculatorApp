@@ -7,17 +7,16 @@
 
 import UIKit
 
-final class AboutViewController: UIViewController {
+class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 viewSettings()
-        // Do any additional setup after loading the view.
     }
    private func viewSettings(){
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "about")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+       let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+       backgroundImage.image = UIImage(named: "bacl")
+       backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+       self.view.insertSubview(backgroundImage, at: 0)
     }
 }
