@@ -8,6 +8,9 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    
+    @IBOutlet weak var parameterView: UIView!
+    
     @IBOutlet var checkMarkD: UIImageView!
     
     @IBOutlet var checkMarkS: UIImageView!
@@ -70,6 +73,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewSettings()
         self.hideKeyboardWhenTappedAround()
         lengthLabel.text = strings.lengthTxt
     }
@@ -77,5 +81,13 @@ final class ViewController: UIViewController {
     private func about() {
         if lengthLabel.text == strings.lengthTxt { alert() }
         else { alert1() }
+    }
+    
+    private func viewSettings() {
+        parameterView.layer.cornerRadius = 17
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "back")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
     }
 }

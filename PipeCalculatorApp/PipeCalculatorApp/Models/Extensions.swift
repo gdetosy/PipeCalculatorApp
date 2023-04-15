@@ -59,10 +59,13 @@ extension ViewController: Raschet {
         let massa1 = ((diametr - stenka) * stenka * 0.02466 * metraj) / 1000
         let heightMetrs = ((diametr - stenka) * stenka * 0.02466 * 1) / 1000
         let kg = (diametr - stenka) * stenka * 0.02466
-        meterLabel.text = "1 m weight = \(round(heightMetrs * 100000) / 100000) t = \(kg) kg."
+        
+        meterLabel.text = "Вес 1м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
 //        heightMetr.animation = Animations.fadeIn.rawValue
 //        heightMetr.animate()
-        weightTf.text = "\(round(massa1 * 100000) / 100000)"
+       let roundWeight = round(massa1 * 100000) / 100000
+        znPipeLabel.text = "Вес оцинкованной трубы = \((roundWeight) * 1.03) кг"
+        weightTf.text = "\(roundWeight)"
     }
 
     func length() {
@@ -70,11 +73,13 @@ extension ViewController: Raschet {
               let stenka = Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")),
               let massa = Float(lengthTf.text!.replacingOccurrences(of: ",", with: "."))
         else { return }
+//        let massa1 = ((diametr - stenka) * stenka * 0.02466 * metraj) / 1000
         let metraj1 = massa * 1000 / ((diametr - stenka) * 0.0246 * stenka)
         let heightMetrs = ((diametr - stenka) * stenka * 0.02466 * 1) / 1000
         let kg = (diametr - stenka) * stenka * 0.02466
         weightTf.text = "\(round(metraj1 * 100000) / 100000)"
-        meterLabel.text = "1 m weight = \(round(heightMetrs * 100000) / 100000) t = \(kg) kg."
+        znPipeLabel.text = "Вес оцинкованной трубы = "
+        meterLabel.text = "Вес 1м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
     }
 }
 
