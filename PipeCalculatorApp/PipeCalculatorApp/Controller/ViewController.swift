@@ -6,11 +6,11 @@
 //
 
 import UIKit
-
+import Spring
 final class ViewController: UIViewController {
     @IBOutlet var info: UIImageView!
     
-    @IBOutlet var parameterView: UIView!
+    @IBOutlet var parameterView: SpringView!
     
     @IBOutlet var checkMarkD: UIImageView!
     
@@ -59,15 +59,15 @@ final class ViewController: UIViewController {
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-//            bigView.animation = Animations.shake.rawValue
-//            bigView.force = 0.25
-//            bigView.animate()
+            parameterView.animation = Animations.shake.rawValue
+            parameterView.force = 0.25
+            parameterView.animate()
             segmentCaseOne()
         case 1:
             segmentCaseTwo()
-//            bigView.animation = Animations.shake.rawValue
-//            bigView.force = 0.25
-//            bigView.animate()
+            parameterView.animation = Animations.shake.rawValue
+            parameterView.force = 0.25
+            parameterView.animate()
         default: print("eror")
         }
     }
