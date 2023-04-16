@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Spring
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -82,8 +82,6 @@ extension ViewController: Raschet {
         let kg = (diametr - stenka) * stenka * 0.02466
 
         meterLabel.text = "Вес 1 м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
-//        heightMetr.animation = Animations.fadeIn.rawValue
-//        heightMetr.animate()
         let roundWeight = round(massa1 * 100000) / 100000
 
         weightTf.text = "\(roundWeight)"
@@ -99,8 +97,7 @@ extension ViewController: Raschet {
         let heightMetrs = ((diametr - stenka) * stenka * 0.02466 * 1) / 1000
         let kg = (diametr - stenka) * stenka * 0.02466
         weightTf.text = "\(round(metraj1 * 100000) / 100000)"
-
-        meterLabel.text = "Вес 1м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
+        meterLabel.text = "Вес 1 м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
     }
 }
 
@@ -122,9 +119,7 @@ extension ViewController: Segment {
         lengthTf.attributedPlaceholder = NSAttributedString(
             string: "м")
         meterLabel.text = ""
-//        heightMetr.animation = Animations.fadeOut.rawValue
-//        heightMetr.animate()
-//        height()
+        weight()
         checkMarkS.alpha = 0
         checkMarkD.alpha = 0
         checkMarkL.alpha = 0
@@ -147,9 +142,7 @@ extension ViewController: Segment {
         lengthTf.attributedPlaceholder = NSAttributedString(
             string: "тн")
         meterLabel.text = ""
-//        heightMetr.animation = Animations.fadeOut.rawValue
-//        heightMetr.animate()
-//        height()
+        weight()
     }
 }
 
@@ -165,9 +158,9 @@ extension ViewController: Calculation {
         guard let diametr = Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")),
               diametr > 0, diametr <= 325
         else { diameterTf.text?.removeAll(); meterLabel.text = " "
-//            diametrTextField.animation = Animations.shake.rawValue
-//            diametrTextField.force = 0.25
-//            diametrTextField.animate()
+            diameterTf.animation = Animations.shake.rawValue
+            diameterTf.force = 0.25
+            diameterTf.animate()
             weightTf.text?.removeAll()
             checkMarkD.alpha = 0
             return
@@ -186,17 +179,17 @@ extension ViewController: Calculation {
               Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) != nil
 
         else {
-//            tolshinaTextField.animation = Animations.shake.rawValue
-//            tolshinaTextField.force = 0.25
-//            tolshinaTextField.animate()
+            thicknesTf.animation = Animations.shake.rawValue
+            thicknesTf.force = 0.25
+            thicknesTf.animate()
             checkMarkS.alpha = 0
             thicknesTf.text?.removeAll()
 
             checkMarkH.alpha = 0
             weightTf.text?.removeAll()
-            meterLabel.text = " "
-//            heightMetr.animation = Animations.fadeOut.rawValue
-//            heightMetr.animate()
+            meterLabel.text = ""
+            meterLabel.animation = Animations.fadeOut.rawValue
+            meterLabel.animate()
             return
         }
 
@@ -213,9 +206,9 @@ extension ViewController: Calculation {
               Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= 100
 
         else {
-//            dlinaTextField.animation = Animations.shake.rawValue
-//            dlinaTextField.force = 0.25
-//            dlinaTextField.animate()
+            lengthTf.animation = Animations.shake.rawValue
+            lengthTf.force = 0.25
+            lengthTf.animate()
             lengthTf.text?.removeAll()
             weightTf.text?.removeAll()
             checkMarkL.alpha = 0

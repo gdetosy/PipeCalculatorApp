@@ -20,17 +20,17 @@ final class ViewController: UIViewController {
     
     @IBOutlet var checkMarkH: UIImageView!
    
-    @IBOutlet var meterLabel: UILabel!
+    @IBOutlet var meterLabel: SpringLabel!
     
     @IBOutlet var znPipeLabel: UILabel!
    
-    @IBOutlet var diameterTf: UITextField!
+    @IBOutlet var diameterTf: SpringTextField!
     
-    @IBOutlet var thicknesTf: UITextField!
+    @IBOutlet var thicknesTf: SpringTextField!
     
-    @IBOutlet var lengthTf: UITextField!
+    @IBOutlet var lengthTf: SpringTextField!
     
-    @IBOutlet var weightTf: UITextField!
+    @IBOutlet var weightTf: SpringTextField!
     
     @IBOutlet var lengthLabel: UILabel!
     
@@ -75,11 +75,6 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSettings()
-        self.hideKeyboardWhenTappedAround()
-        lengthLabel.text = strings.lengthTxt
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tappedMe))
-        info.addGestureRecognizer(tap)
-        info.isUserInteractionEnabled = true
     }
 
     private func about() {
@@ -93,9 +88,14 @@ final class ViewController: UIViewController {
         backgroundImage.image = UIImage(named: "about")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+        self.hideKeyboardWhenTappedAround()
+        lengthLabel.text = strings.lengthTxt
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tappedMe))
+        info.addGestureRecognizer(tap)
+        info.isUserInteractionEnabled = true
     }
 
-    @objc func tappedMe() {
+    @objc private func tappedMe() {
         alertImage()
     }
 }
