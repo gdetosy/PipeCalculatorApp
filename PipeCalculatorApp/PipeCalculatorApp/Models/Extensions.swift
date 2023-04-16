@@ -32,7 +32,10 @@ extension ViewController: Alert {
                                       preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
+        let height = NSLayoutConstraint(item: alert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
+        let width = NSLayoutConstraint(item: alert.view as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 280)
+        alert.view.addConstraint(height)
+        alert.view.addConstraint(width)
         self.present(alert, animated: true, completion: nil)
     }
 
@@ -41,17 +44,20 @@ extension ViewController: Alert {
                                       preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
+        let height = NSLayoutConstraint(item: alert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
+        let width = NSLayoutConstraint(item: alert.view as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 280)
+        alert.view.addConstraint(height)
+        alert.view.addConstraint(width)
         self.present(alert, animated: true, completion: nil)
     }
 
     func alertImage() {
         let showAlert = UIAlertController(title: "Параметры трубы", message: nil, preferredStyle: .alert)
-        let imageView = UIImageView(frame: CGRect(x: 48, y: 45, width: 200, height: 150))
+        let imageView = UIImageView(frame: CGRect(x: 48, y: 50, width: 200, height: 165))
         imageView.image = UIImage(named: "pipe-round") // Your image here...
         showAlert.view.addSubview(imageView)
-        let height = NSLayoutConstraint(item: showAlert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
-        let width = NSLayoutConstraint(item: showAlert.view as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+        let height = NSLayoutConstraint(item: showAlert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 280)
+        let width = NSLayoutConstraint(item: showAlert.view as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 280)
         showAlert.view.addConstraint(height)
         showAlert.view.addConstraint(width)
         showAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
