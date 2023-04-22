@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
     
     @IBOutlet var checkMarkH: UIImageView!
    
-    @IBOutlet var meterLabel: SpringLabel!
+    @IBOutlet var meterLabel: UILabel!
     
     @IBOutlet var znPipeLabel: UILabel!
    

@@ -163,6 +163,7 @@ extension ViewController: Calculation {
             diameterTf.animate()
             weightTf.text?.removeAll()
             checkMarkD.alpha = 0
+            meterLabel.text = ""
             return
         }
         checkMarkD.alpha = 1
@@ -184,12 +185,9 @@ extension ViewController: Calculation {
             thicknesTf.animate()
             checkMarkS.alpha = 0
             thicknesTf.text?.removeAll()
-
             checkMarkH.alpha = 0
             weightTf.text?.removeAll()
             meterLabel.text = ""
-            meterLabel.animation = Animations.fadeOut.rawValue
-            meterLabel.animate()
             return
         }
 
@@ -204,7 +202,6 @@ extension ViewController: Calculation {
     func lengths() {
         guard Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) != nil,
               Float(lengthTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= 100
-
         else {
             lengthTf.animation = Animations.shake.rawValue
             lengthTf.force = 0.25
