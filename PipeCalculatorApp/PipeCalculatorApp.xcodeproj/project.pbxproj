@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D01C06AA3681407EF385CD0 /* Pods_PipeCalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EE90CD84ECD4DFF5015E0D /* Pods_PipeCalculatorApp.framework */; };
-		963324B929F441AA00194CDB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963324B829F441AA00194CDB /* SplashViewController.swift */; };
 		964F0E8029EC6333001B3287 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F0E7F29EC6333001B3287 /* Animation.swift */; };
 		9670188029E300E300069AF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670187F29E300E300069AF9 /* AppDelegate.swift */; };
 		9670188229E300E300069AF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670188129E300E300069AF9 /* SceneDelegate.swift */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		1CD4EE3163DC53F5154C9F4A /* Pods-PipeCalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeCalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-PipeCalculatorApp/Pods-PipeCalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		93E0325C3FCA4F20F53F2CD2 /* Pods-PipeCalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeCalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-PipeCalculatorApp/Pods-PipeCalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
-		963324B829F441AA00194CDB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		964F0E7F29EC6333001B3287 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		9670187C29E300E300069AF9 /* PipeCalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipeCalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9670187F29E300E300069AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		9670189629E4857D00069AF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				963324B829F441AA00194CDB /* SplashViewController.swift */,
 				9670188329E300E300069AF9 /* ViewController.swift */,
 				96FEB4E829EB388C0041307F /* DeveloperViewController.swift */,
 			);
@@ -260,7 +257,6 @@
 				9670189A29E8887300069AF9 /* Models.swift in Sources */,
 				964F0E8029EC6333001B3287 /* Animation.swift in Sources */,
 				96FEB4E929EB388C0041307F /* DeveloperViewController.swift in Sources */,
-				963324B929F441AA00194CDB /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +411,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,6 +440,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

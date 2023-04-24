@@ -174,7 +174,7 @@ extension ViewController: Calculation {
     }
 
     func thicknes() {
-        guard let dmtr = Float(diameterTf.text!),
+        guard let dmtr = Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")),
               Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 < Float(diameterTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0,
               Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) ?? 0 <= dmtr / 2,
               Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")) != nil
