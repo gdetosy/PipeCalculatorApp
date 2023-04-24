@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ar9-2c-fEd">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Параметры трубы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-CW-BjO">
-                                <rect key="frame" x="25" y="237.66666666666666" width="193.66666666666666" height="25.333333333333343"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-UE-z2Q" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="25" y="271" width="325" height="185.66666666666663"/>
                                 <subviews>
@@ -210,9 +205,9 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCt-bJ-dd8">
-                                <rect key="frame" x="240" y="165" width="75" height="34.333333333333343"/>
+                                <rect key="frame" x="100" y="757.66666666666663" width="175" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="  Обратная связь"/>
                                 <connections>
                                     <segue destination="t2R-QJ-nfi" kind="presentation" id="hay-Lu-xQT"/>
                                 </connections>
@@ -226,6 +221,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Параметры трубы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-CW-BjO">
+                                <rect key="frame" x="25" y="237.66666666666666" width="193.66666666666666" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m20-JD-ZrN" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easyOut"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeOut"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Bw-0f-2KT" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -271,17 +287,17 @@
                         <constraints>
                             <constraint firstItem="4Bw-0f-2KT" firstAttribute="top" secondItem="n1A-CD-5ww" secondAttribute="top" id="0aU-hK-k4b"/>
                             <constraint firstItem="AiW-ef-CPq" firstAttribute="top" secondItem="y7X-wD-Uof" secondAttribute="bottom" constant="8" symbolic="YES" id="0xd-Co-SHO"/>
-                            <constraint firstItem="KCt-bJ-dd8" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="74" id="3ZA-Xd-hVP"/>
+                            <constraint firstAttribute="bottom" secondItem="KCt-bJ-dd8" secondAttribute="bottom" constant="20" symbolic="YES" id="1MX-UA-2lo"/>
                             <constraint firstItem="Ei9-J2-k8U" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="210" id="3lm-ub-II7"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="lb9-U5-VEc" secondAttribute="bottom" constant="9.6699999999999999" id="4lU-Kk-IB8"/>
                             <constraint firstItem="rVm-Xf-fkU" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="50" id="9Fw-Vr-ba6"/>
                             <constraint firstAttribute="bottom" secondItem="4Bw-0f-2KT" secondAttribute="bottom" id="Aer-dN-QKY"/>
-                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="KCt-bJ-dd8" secondAttribute="trailing" constant="60" id="ENE-50-fTt"/>
                             <constraint firstItem="lb9-U5-VEc" firstAttribute="leading" secondItem="bLY-CW-BjO" secondAttribute="trailing" constant="5" id="FbU-2d-qyG"/>
                             <constraint firstItem="4Bw-0f-2KT" firstAttribute="trailing" secondItem="WPg-A0-kAl" secondAttribute="trailing" id="Iq3-nn-brd"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="rVm-Xf-fkU" secondAttribute="trailing" constant="50" id="KmT-JQ-Cq6"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="bLY-CW-BjO" secondAttribute="bottom" constant="8" symbolic="YES" id="QBR-3D-7Dn"/>
                             <constraint firstItem="y7X-wD-Uof" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="8" symbolic="YES" id="T6G-Sy-5NE"/>
+                            <constraint firstItem="KCt-bJ-dd8" firstAttribute="leading" secondItem="n1A-CD-5ww" secondAttribute="leading" constant="100" id="Upk-ci-baM"/>
                             <constraint firstItem="y7X-wD-Uof" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="bfB-bS-CvS"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="180" id="cUJ-lN-Nor"/>
                             <constraint firstItem="Ei9-J2-k8U" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="5" id="d57-va-EKC"/>
@@ -291,6 +307,7 @@
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="AiW-ef-CPq" secondAttribute="trailing" constant="25" id="hyd-11-ooY"/>
                             <constraint firstItem="4Bw-0f-2KT" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" id="mWu-y1-wt1"/>
                             <constraint firstItem="rVm-Xf-fkU" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" id="nXD-77-fhe"/>
+                            <constraint firstAttribute="trailing" secondItem="KCt-bJ-dd8" secondAttribute="trailing" constant="100" id="o2x-k2-XHD"/>
                             <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="FdD-UE-z2Q" secondAttribute="trailing" constant="25" id="xVC-RZ-VXt"/>
                         </constraints>
                     </view>
@@ -298,6 +315,7 @@
                     <navigationItem key="navigationItem" id="K2y-IZ-UVN"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="blackImageView" destination="m20-JD-ZrN" id="fHD-7w-B6z"/>
                         <outlet property="checkMarkD" destination="YBz-cv-1h6" id="1Mc-g0-jSv"/>
                         <outlet property="checkMarkH" destination="SWh-Bu-e3J" id="eLi-Q1-7y3"/>
                         <outlet property="checkMarkL" destination="9La-rc-rjZ" id="52N-JL-I8E"/>
@@ -326,14 +344,30 @@
                     <view key="view" contentMode="scaleToFill" id="aOz-Q2-Pwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPf-JF-502">
+                                <rect key="frame" x="30" y="188" width="315" height="379"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="40w-QR-pC5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SPf-JF-502" firstAttribute="top" secondItem="40w-QR-pC5" secondAttribute="top" constant="141" id="amW-rP-Nls"/>
+                            <constraint firstItem="SPf-JF-502" firstAttribute="leading" secondItem="40w-QR-pC5" secondAttribute="leading" constant="30" id="dZe-75-sYO"/>
+                            <constraint firstItem="40w-QR-pC5" firstAttribute="bottom" secondItem="SPf-JF-502" secondAttribute="bottom" constant="188" id="yme-Kd-3sQ"/>
+                            <constraint firstItem="40w-QR-pC5" firstAttribute="trailing" secondItem="SPf-JF-502" secondAttribute="trailing" constant="30" id="zGA-Cj-gFA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="81T-ds-glt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beh-bg-eGO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5556" y="128"/>
+            <point key="canvasLocation" x="5556" y="127.83251231527095"/>
         </scene>
         <!--Item-->
         <scene sceneID="vh5-bz-YHK">
@@ -359,6 +393,9 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

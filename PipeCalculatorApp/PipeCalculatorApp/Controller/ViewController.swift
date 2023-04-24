@@ -8,6 +8,7 @@
 import UIKit
 import Spring
 final class ViewController: UIViewController {
+    @IBOutlet weak var blackImageView: SpringImageView!
     
     @IBOutlet weak var splashView: SpringImageView!
     @IBOutlet weak var introLbl: SpringLabel!
@@ -91,6 +92,11 @@ final class ViewController: UIViewController {
         splashView.animation = Animations.fadeOut.rawValue
         splashView.delay = 2
         splashView.animate()
+        blackImageView.animation = Animations.fadeOut.rawValue
+        blackImageView.delay = 1.8
+        blackImageView.animate()
+        
+        
         parameterView.layer.cornerRadius = 17
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "about")
