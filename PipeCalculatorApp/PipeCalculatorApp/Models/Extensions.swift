@@ -83,7 +83,6 @@ extension ViewController: Raschet {
 
         meterLabel.text = "Вес 1 м = \(round(heightMetrs * 100000) / 100000) тн = \(kg) кг."
         let roundWeight = round(massa1 * 100000) / 100000
-
         weightTf.text = "\(roundWeight)"
     }
 
@@ -92,7 +91,6 @@ extension ViewController: Raschet {
               let stenka = Float(thicknesTf.text!.replacingOccurrences(of: ",", with: ".")),
               let massa = Float(lengthTf.text!.replacingOccurrences(of: ",", with: "."))
         else { return }
-//        let massa1 = ((diametr - stenka) * stenka * 0.02466 * metraj) / 1000
         let metraj1 = massa * 1000 / ((diametr - stenka) * 0.0246 * stenka)
         let heightMetrs = ((diametr - stenka) * stenka * 0.02466 * 1) / 1000
         let kg = (diametr - stenka) * stenka * 0.02466

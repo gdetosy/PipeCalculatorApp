@@ -8,10 +8,9 @@
 import UIKit
 import Spring
 final class ViewController: UIViewController {
-    @IBOutlet weak var blackImageView: SpringImageView!
+
     
-    @IBOutlet weak var splashView: SpringImageView!
-    @IBOutlet weak var introLbl: SpringLabel!
+    @IBOutlet weak var qustetionsBtn: UIButton!
     
     @IBOutlet var info: UIImageView!
     
@@ -88,18 +87,10 @@ final class ViewController: UIViewController {
     }
     
     private func viewSettings() {
-        introLbl.animate()
-        splashView.animation = Animations.fadeOut.rawValue
-        splashView.delay = 2
-        splashView.animate()
-        blackImageView.animation = Animations.fadeOut.rawValue
-        blackImageView.delay = 1.8
-        blackImageView.animate()
-        
-        
+        overrideUserInterfaceStyle = .light
         parameterView.layer.cornerRadius = 17
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "about")
+        backgroundImage.image = UIImage(named: "about1")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         self.hideKeyboardWhenTappedAround()

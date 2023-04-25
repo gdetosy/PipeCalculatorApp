@@ -9,14 +9,17 @@ import UIKit
 
 class DeveloperViewController: UIViewController {
 
-   
+    @IBOutlet weak var textView: UITextView!
+    
         override func viewDidLoad() {
             super.viewDidLoad()
     viewSettings()
         }
        private func viewSettings(){
+           textView.layer.cornerRadius = 15
+           overrideUserInterfaceStyle = .light
            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-           backgroundImage.image = UIImage(named: "back")
+           backgroundImage.image = UIImage(named: "pipe")
            backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
            self.view.insertSubview(backgroundImage, at: 0)
         }
