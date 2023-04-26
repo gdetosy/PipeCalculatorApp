@@ -6,7 +6,7 @@
 //
 
 import Foundation
-let strings = Strings()
+//let strings = Strings()
 struct Strings {
     let heightTxt = "Вес, тн"
     let lengthTxt = "Длина, м"
@@ -23,3 +23,7 @@ struct Strings {
     Длина трубы = вес трубы x 1000 / ((диаметр трубы - толщина стенки) x 0.0246 x толщина стенки)
     """
 }
+struct Array {
+    let gosts = ["ГОСТ 3262-75", "ГОСТ 10704-75"]
+}
+

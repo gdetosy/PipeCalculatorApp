@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D01C06AA3681407EF385CD0 /* Pods_PipeCalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EE90CD84ECD4DFF5015E0D /* Pods_PipeCalculatorApp.framework */; };
+		963324BB29F84A6E00194CDB /* GostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963324BA29F84A6E00194CDB /* GostViewController.swift */; };
 		964F0E8029EC6333001B3287 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F0E7F29EC6333001B3287 /* Animation.swift */; };
 		9670188029E300E300069AF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670187F29E300E300069AF9 /* AppDelegate.swift */; };
 		9670188229E300E300069AF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670188129E300E300069AF9 /* SceneDelegate.swift */; };
@@ -17,12 +18,14 @@
 		9670188C29E300E600069AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9670188A29E300E600069AF9 /* LaunchScreen.storyboard */; };
 		9670189529E4856200069AF9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670189429E4856200069AF9 /* Extensions.swift */; };
 		9670189A29E8887300069AF9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670189929E8887300069AF9 /* Models.swift */; };
+		96EB980629F8545000CE7C0B /* Gost3262ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB980529F8545000CE7C0B /* Gost3262ViewController.swift */; };
 		96FEB4E929EB388C0041307F /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEB4E829EB388C0041307F /* DeveloperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CD4EE3163DC53F5154C9F4A /* Pods-PipeCalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeCalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-PipeCalculatorApp/Pods-PipeCalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		93E0325C3FCA4F20F53F2CD2 /* Pods-PipeCalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeCalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-PipeCalculatorApp/Pods-PipeCalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
+		963324BA29F84A6E00194CDB /* GostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GostViewController.swift; sourceTree = "<group>"; };
 		964F0E7F29EC6333001B3287 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		9670187C29E300E300069AF9 /* PipeCalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipeCalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9670187F29E300E300069AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		9670188D29E300E600069AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9670189429E4856200069AF9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9670189929E8887300069AF9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		96EB980529F8545000CE7C0B /* Gost3262ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gost3262ViewController.swift; sourceTree = "<group>"; };
 		96FEB4E829EB388C0041307F /* DeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
 		E9EE90CD84ECD4DFF5015E0D /* Pods_PipeCalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PipeCalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +99,8 @@
 			children = (
 				9670188329E300E300069AF9 /* ViewController.swift */,
 				96FEB4E829EB388C0041307F /* DeveloperViewController.swift */,
+				963324BA29F84A6E00194CDB /* GostViewController.swift */,
+				96EB980529F8545000CE7C0B /* Gost3262ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,12 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9670188429E300E300069AF9 /* ViewController.swift in Sources */,
+				96EB980629F8545000CE7C0B /* Gost3262ViewController.swift in Sources */,
 				9670188029E300E300069AF9 /* AppDelegate.swift in Sources */,
 				9670188229E300E300069AF9 /* SceneDelegate.swift in Sources */,
 				9670189529E4856200069AF9 /* Extensions.swift in Sources */,
 				9670189A29E8887300069AF9 /* Models.swift in Sources */,
 				964F0E8029EC6333001B3287 /* Animation.swift in Sources */,
 				96FEB4E929EB388C0041307F /* DeveloperViewController.swift in Sources */,
+				963324BB29F84A6E00194CDB /* GostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
