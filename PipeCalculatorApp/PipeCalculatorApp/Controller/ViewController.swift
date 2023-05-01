@@ -22,6 +22,7 @@ final class ViewController: UIViewController, UITableViewDelegate, UITableViewDa
             // set the text from the data model
         cell.textLabel?.text = self.array.gosts[indexPath.row]
         if indexPath.row == 0{
+           
             cell.backgroundColor = .orange
         }else{
             cell.backgroundColor = .orange

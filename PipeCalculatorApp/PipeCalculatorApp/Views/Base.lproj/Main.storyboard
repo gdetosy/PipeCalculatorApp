@@ -349,17 +349,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ddd" translatesAutoresizingMaskIntoConstraints="NO" id="omI-eC-bVj">
-                                <rect key="frame" x="0.0" y="47" width="375" height="708"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ex2" translatesAutoresizingMaskIntoConstraints="NO" id="5yG-vW-JO3">
+                                <rect key="frame" x="16" y="47" width="343" height="708"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j2h-3t-I8q"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <color key="backgroundColor" red="0.71113330129999996" green="0.85902816059999998" blue="0.84705996510000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="omI-eC-bVj" firstAttribute="leading" secondItem="j2h-3t-I8q" secondAttribute="leading" id="5oN-oy-s3E"/>
-                            <constraint firstItem="j2h-3t-I8q" firstAttribute="trailing" secondItem="omI-eC-bVj" secondAttribute="trailing" id="6WZ-nV-3iE"/>
-                            <constraint firstItem="j2h-3t-I8q" firstAttribute="bottom" secondItem="omI-eC-bVj" secondAttribute="bottom" id="YYD-pe-4hq"/>
-                            <constraint firstItem="omI-eC-bVj" firstAttribute="top" secondItem="j2h-3t-I8q" secondAttribute="top" id="isE-jZ-12a"/>
+                            <constraint firstItem="5yG-vW-JO3" firstAttribute="top" secondItem="cZO-An-zB1" secondAttribute="topMargin" id="7kd-6x-Ghj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5yG-vW-JO3" secondAttribute="bottom" id="JRC-Qx-Ece"/>
+                            <constraint firstItem="5yG-vW-JO3" firstAttribute="leading" secondItem="cZO-An-zB1" secondAttribute="leadingMargin" id="UBx-jW-nIJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5yG-vW-JO3" secondAttribute="trailing" id="nmS-X0-c7g"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -426,7 +426,7 @@
     <resources>
         <image name="3262" width="535" height="518"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="ddd" width="533" height="565"/>
+        <image name="ex2" width="828" height="1792"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -442,9 +442,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
