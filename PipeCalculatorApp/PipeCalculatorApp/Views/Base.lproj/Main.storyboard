@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -247,15 +246,6 @@
                                     <segue destination="NyI-0J-nTo" kind="presentation" id="4JH-cZ-gga"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-Tb-1td">
-                                <rect key="frame" x="25" y="555" width="325" height="24"/>
-                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexColor" red="0.12598265980000001" green="0.0" blue="0.90699809789999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexBackgroundColor" red="0.26808060360000002" green="0.63712025650000004" blue="0.098871693600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexTrackingBackgroundColor" name="AccentColor"/>
-                                <sections/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPg-A0-kAl"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -264,16 +254,12 @@
                             <constraint firstAttribute="bottom" secondItem="KCt-bJ-dd8" secondAttribute="bottom" constant="20" symbolic="YES" id="1MX-UA-2lo"/>
                             <constraint firstItem="Ei9-J2-k8U" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="210" id="3lm-ub-II7"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="lb9-U5-VEc" secondAttribute="bottom" constant="9.6699999999999999" id="4lU-Kk-IB8"/>
-                            <constraint firstItem="WPg-A0-kAl" firstAttribute="trailing" secondItem="PzY-Tb-1td" secondAttribute="trailing" constant="25" id="Ct4-mU-AdK"/>
                             <constraint firstItem="lb9-U5-VEc" firstAttribute="leading" secondItem="bLY-CW-BjO" secondAttribute="trailing" constant="5" id="FbU-2d-qyG"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="bLY-CW-BjO" secondAttribute="bottom" constant="8" symbolic="YES" id="QBR-3D-7Dn"/>
                             <constraint firstItem="HgO-7D-nMd" firstAttribute="top" secondItem="KBc-fP-88V" secondAttribute="bottom" constant="10" id="QN7-PD-cQE"/>
                             <constraint firstItem="HgO-7D-nMd" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="100" id="Sdn-7r-bsL"/>
                             <constraint firstItem="y7X-wD-Uof" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="bottom" constant="8" symbolic="YES" id="T6G-Sy-5NE"/>
                             <constraint firstItem="KCt-bJ-dd8" firstAttribute="leading" secondItem="n1A-CD-5ww" secondAttribute="leading" constant="107" id="Upk-ci-baM"/>
-                            <constraint firstItem="PzY-Tb-1td" firstAttribute="top" secondItem="HgO-7D-nMd" secondAttribute="bottom" constant="7.3300000000000001" id="VDn-lu-Nbm"/>
-                            <constraint firstItem="WPg-A0-kAl" firstAttribute="bottom" secondItem="PzY-Tb-1td" secondAttribute="bottom" constant="150" id="X5K-ej-xr0"/>
-                            <constraint firstItem="PzY-Tb-1td" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="Yl1-e1-PsX"/>
                             <constraint firstItem="KBc-fP-88V" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="75" id="ZNi-n4-AS8"/>
                             <constraint firstItem="y7X-wD-Uof" firstAttribute="leading" secondItem="WPg-A0-kAl" secondAttribute="leading" constant="25" id="bfB-bS-CvS"/>
                             <constraint firstItem="FdD-UE-z2Q" firstAttribute="top" secondItem="WPg-A0-kAl" secondAttribute="top" constant="100" id="cUJ-lN-Nor"/>
@@ -304,7 +290,6 @@
                         <outlet property="meterLabel" destination="MCC-pe-qL3" id="Igk-GL-AAJ"/>
                         <outlet property="parameterView" destination="FdD-UE-z2Q" id="rHo-LO-7OF"/>
                         <outlet property="qustetionsBtn" destination="Ei9-J2-k8U" id="3Q6-cL-3mb"/>
-                        <outlet property="tableView" destination="PzY-Tb-1td" id="EYY-zF-Ym7"/>
                         <outlet property="thicknesTf" destination="GHf-bW-yIo" id="7Aq-Do-hUL"/>
                         <outlet property="weightLabel" destination="SQI-bH-XxD" id="mXf-Hh-5OY"/>
                         <outlet property="weightTf" destination="Z9y-UF-Urx" id="3M0-KM-Ms2"/>
@@ -428,9 +413,6 @@
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="ex2" width="828" height="1792"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
