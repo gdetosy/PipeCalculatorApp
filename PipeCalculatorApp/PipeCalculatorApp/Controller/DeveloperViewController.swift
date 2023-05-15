@@ -19,7 +19,7 @@ class DeveloperViewController: UIViewController {
            textView.layer.cornerRadius = 15
            overrideUserInterfaceStyle = .light
            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-           backgroundImage.image = UIImage(named: "pipe")
+           backgroundImage.image = UIImage(named: "zxc")
            backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
            self.view.insertSubview(backgroundImage, at: 0)
         }

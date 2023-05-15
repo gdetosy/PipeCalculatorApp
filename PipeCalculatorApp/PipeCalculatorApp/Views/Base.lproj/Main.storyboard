@@ -28,7 +28,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-cv-1h6">
                                                         <rect key="frame" x="0.0" y="11.999999999999991" width="18.333333333333332" height="16"/>
-                                                        <color key="tintColor" red="0.26808060355769359" green="0.63712025652028093" blue="0.098871693599782928" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.42076923599999999" green="1" blue="0.15518529289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="18.329999999999998" id="CCp-Dm-gPa"/>
                                                         </constraints>
@@ -63,7 +63,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-Rr-vDK">
                                                         <rect key="frame" x="0.0" y="9.3333333333333037" width="18.333333333333332" height="16.333333333333336"/>
-                                                        <color key="tintColor" red="0.26808060360000002" green="0.63712025650000004" blue="0.098871693600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.42076923599999999" green="1" blue="0.15518529289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.329999999999998" id="Cg5-em-1bG"/>
                                                             <constraint firstAttribute="width" constant="18.329999999999998" id="uNJ-cq-YEL"/>
@@ -99,7 +99,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9La-rc-rjZ">
                                                         <rect key="frame" x="0.0" y="8.9999999999999609" width="18.333333333333332" height="16.333333333333336"/>
-                                                        <color key="tintColor" red="0.26808060360000002" green="0.63712025650000004" blue="0.098871693600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.42076923599999999" green="1" blue="0.15518529289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.329999999999998" id="Ud0-pp-cM3"/>
                                                             <constraint firstAttribute="width" constant="18.329999999999998" id="r1c-ay-iCk"/>
@@ -130,7 +130,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="752" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SWh-Bu-e3J">
                                                         <rect key="frame" x="0.0" y="9.3333333333333321" width="18.333333333333332" height="16.333333333333336"/>
-                                                        <color key="tintColor" red="0.26808060360000002" green="0.63712025650000004" blue="0.098871693600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.42076923599999999" green="1" blue="0.15518529289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.329999999999998" id="W7S-SQ-OAc"/>
                                                             <constraint firstAttribute="width" constant="18.329999999999998" id="zKd-kE-9iC"/>
@@ -177,7 +177,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="oWd-3h-m9E" firstAttribute="top" secondItem="FdD-UE-z2Q" secondAttribute="top" constant="10" id="Ddv-Db-iZc"/>
                                     <constraint firstItem="oWd-3h-m9E" firstAttribute="leading" secondItem="FdD-UE-z2Q" secondAttribute="leading" constant="10" id="Rib-gW-TnM"/>
@@ -210,7 +210,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCt-bJ-dd8">
                                 <rect key="frame" x="107" y="560.66666666666663" width="161" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="  Обратная связь"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Обратная связь"/>
                                 <connections>
                                     <segue destination="t2R-QJ-nfi" kind="presentation" id="hay-Lu-xQT"/>
                                 </connections>
@@ -417,9 +417,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

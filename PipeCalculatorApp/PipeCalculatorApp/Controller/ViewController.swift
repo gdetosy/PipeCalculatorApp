@@ -94,7 +94,7 @@ final class ViewController: UIViewController {
         overrideUserInterfaceStyle = .light
         parameterView.layer.cornerRadius = 17
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "zxc")
+        backgroundImage.image = UIImage(named: "zxc2")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         self.hideKeyboardWhenTappedAround()
